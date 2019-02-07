@@ -123,13 +123,6 @@ func (client *Client) request(action string, params interface{}) (interface{}, e
 	}
 }
 
-func makeParams(action string, params interface{}, method string, host string, path string) {
-	switch action {
-	case ActionSendMessage:
-
-	}
-}
-
 // SendMessage 发送消息到队列
 func (client *Client) SendMessage(params interface{}) (SendMessageResp, error) {
 	if resp, err := client.request(ActionSendMessage, params); err != nil {
